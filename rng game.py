@@ -6,6 +6,7 @@ Created on Wed Aug 03 14:49:01 2016
 """
 
 import random
+import pandas
 rand_num = random.randint(1, 1000)
 count = 5
 print("Try to guess a number between 1 and 1000 that is randomly generated.")

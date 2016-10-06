@@ -5,7 +5,7 @@ Spyder Editor
 This is a temporary script file.
 """
 import itertools
-import numpy
+#import numpy
 import pandas
 # create dataframe witg index needed (all timeslots) and for each valid perm put in dataframe (table)
 

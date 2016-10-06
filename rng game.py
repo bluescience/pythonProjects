@@ -26,7 +26,7 @@ while (count > 0):
     else:
         print("You broke it, how did you do it")
         quit()        
-    count = count - 1
+    count -= 1 
     
 print("The correct number is ", rand_num)
     

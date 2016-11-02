@@ -10,10 +10,10 @@ Created on Thu Oct 13 15:27:45 2016
 highScore = []
 tempHighScore = []
 
-
+mainMenuChoice = "9"
 menuCheck = True
 
-while menuCheck == True:
+while mainMenuChoice != "0":
     count = 0
     
     print("\nHIGH SCORE RECORDER\n")
@@ -23,10 +23,10 @@ while menuCheck == True:
     mainMenuChoice= raw_input("Please input one of these numbers: ")
     while mainMenuChoice.isdigit() == False:
         print("Please make sure the number you inputed is only composed of numbers: ")
-    if mainMenuChoice == 0:
+    if mainMenuChoice == "0":
         menuCheck = False  
         
-    elif mainMenuChoice == 1:
+    elif mainMenuChoice == "1":
         name = raw_input("Please input your name: ")
         tempHighScore.append(name)
         userHighScore = raw_input("Please input your high score: ")
@@ -39,7 +39,7 @@ while menuCheck == True:
         
         
         
-    elif mainMenuChoice == 2:
+    elif mainMenuChoice == "2":
         highScore.sort(key=lambda x: int(x[1]))
         highScore.reverse()
         print("0. [name, highscore]")

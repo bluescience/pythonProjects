@@ -7,11 +7,8 @@ Created on Wed Nov 02 12:06:29 2016
 
             
             
-stats = {'STR': 8, 'DEX': 8, 'CON': 8, 'INT': 8, 'WIS': 8, 'CHA': 8}
+stats = dict(STR = 8, DEX = 8, CON = 8, INT = 8, WIS = 8, CHA = 8)
 points = 27
-
-statSelection = ""
-
 
 while points > 0:
     
@@ -23,11 +20,10 @@ while points > 0:
     userInput = int(raw_input("Which would you like to pick? "))
     
     if userInput == 0:
-        statSelection = raw_input("Which value would you like to increase? (Choices are: STR, DEX, CON, INT, WIS, CHA) ").upper
-
-        while statSelection not in stats:
-            statSelection = raw_input("Which value would you like to increase? (Choices are: STR, DEX, CON, INT, WIS, CHA) ").upper 
-            print(stats[statSelection])
+        statSelection = raw_input("Which value would you like to increase? (Choices are: STR, DEX, CON, INT, WIS, CHA) ").upper()
+        #print type(statSelection), statSelection 
+        while statSelection not in stats.keys():
+            statSelection = raw_input("Which value would you like to increase? (Choices are: STR, DEX, CON, INT, WIS, CHA) ").upper() 
 
         stats[statSelection] += 1
         points -= 1
@@ -44,10 +40,10 @@ while points > 0:
         print(points)
         print(stats)
     elif userInput == 1:
-        statSelection = raw_input("Which value would you like to decrease? (Choices are: STR, DEX, CON, INT, WIS, CHA) ").upper
+        statSelection = raw_input("Which value would you like to decrease? (Choices are: STR, DEX, CON, INT, WIS, CHA) ").upper()
 
         while statSelection not in stats:
-            statSelection = raw_input("Which value would you like to decrease? (Choices are: STR, DEX, CON, INT, WIS, CHA) ").upper 
+            statSelection = raw_input("Which value would you like to decrease? (Choices are: STR, DEX, CON, INT, WIS, CHA) ").upper() 
         
         stats[statSelection] -= 1
         points += 1

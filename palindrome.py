@@ -16,8 +16,8 @@ while firstInt < 1000:
         op = (firstInt * secondInt)
         if str(op) == str(op)[::-1] and op > biggestPalindrome:
             biggestPalindrome = (op)
-        print("{} x {} = {}").format(firstInt, secondInt, op)
-        print("Current biggest palindrome is {}.").format(biggestPalindrome)
+        #print("{} x {} = {}").format(firstInt, secondInt, op)
+        #print("Current biggest palindrome is {}.").format(biggestPalindrome)
         secondInt += 1
     firstInt += 1
-print(op)
+print(biggestPalindrome)

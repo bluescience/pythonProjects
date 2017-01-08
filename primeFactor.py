@@ -32,24 +32,60 @@ def isPrimeFactor(numCheck):
     print(numPrime[-1])
 
 isPrimeFactor(600851475143)
+
+
+def isFactor(num):
+     for i in range(1, num/2+1):
+        if num % i == 0:
+            factor = i
+            yield factor
+
+
+def isPrime(num):
+    primeCheck = True
+    for j in range(2, i/2+1):
+        if i % j == 0:
+            primeCheck = False
+            if primeCheck == True:
+                yield i
+
+for i in isFactor(16):
+    for j in isPrime(i):
+        print(j)
+'''
+'''
+def isFactor(num, i):
+    global biggestPrimeFactor    
+    if i < num/2 + 1:
+        if num % i == 0:
+            isPrime(num, i, 2)
+        else:
+            isFactor(num, i+1)
+    else:
+        print(biggestPrimeFactor)
+        return 
+      
+  
+def isPrime(num, i, j):                      
+    global biggestPrimeFactor    
+    if j < i/2 + 1:
+        if i % j == 0:
+            isFactor(num, i+1)
+        else:
+            isPrime(num, i, j+1)
+    else: 
+        biggestPrimeFactor = i
+        isFactor(num, i+1)
+
+isFactor(13195, 2)            
 '''
 
-def isPrimeFactor(num):
-     for i in range(1, num/2):
-        if num % i == 0:
-            primeCheck = True
-            for j in range(2, i/2):
-                if i % j == 0:
-                    primeCheck = False
-            if primeCheck == True:
-                biggestPrimeFactor = i
-                print(biggestPrimeFactor)
-     print(biggestPrimeFactor)
-
-isPrimeFactor(600851475143)
+n = 600851475143
+i = 2
+while i * i < n:
+    while n % i == 0:
+        n = n // i
+    i = i + 1
+print n
                 
-        
-        
-
 #Write code that checks if num is prime, and then if biggerNum is divisible by num, all in one.  
-            
